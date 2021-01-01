@@ -20,7 +20,7 @@ exports.getBlogs = async (req, res) => {
       }
     },
     {
-      $project: { likes: { $size: "$likesCount" }, comments: "$comments", title: 1, content: 1, _id: 1 }
+      $project: { likes: { $size: "$likesCount" }, comments: "$comments", title: 1, content: 1, _id: 1, user_id: 1 }
     },
   ]);
 
